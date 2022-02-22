@@ -24,6 +24,11 @@ export const Dragon: React.FC = () => {
         ) : (
           <Flex gap="0.5rem">
             <div>
+              <Overline>Criado em</Overline>
+              <h4>{new Date(dragon.createdAt).toLocaleDateString()}</h4>
+            </div>
+
+            <div>
               <Overline>Dragon</Overline>
               <h2>{dragon.name}</h2>
             </div>
