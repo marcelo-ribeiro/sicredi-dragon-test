@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/sicredi-dragon-test/static/js/main.63f6c378.js",
+    "main.js": "/sicredi-dragon-test/static/js/main.3e67b016.js",
     "index.html": "/sicredi-dragon-test/index.html",
-    "main.63f6c378.js.map": "/sicredi-dragon-test/static/js/main.63f6c378.js.map"
+    "main.3e67b016.js.map": "/sicredi-dragon-test/static/js/main.3e67b016.js.map"
   },
   "entrypoints": [
-    "static/js/main.63f6c378.js"
+    "static/js/main.3e67b016.js"
   ]
 }
