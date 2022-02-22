@@ -10,7 +10,8 @@ export const StyledModal = styled.section`
 
   .modal__content {
     position: relative;
-    min-width: 480px;
+    width: 100%;
+    max-width: 480px;
     padding: 1.5rem;
     background-color: #fff;
     border-radius: 12px;
