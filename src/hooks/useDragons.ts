@@ -11,7 +11,6 @@ export const useDragons = () => {
     try {
       const { data } = await dragonsApi.get();
       data.sort((a: any, b: any) => a.name.localeCompare(b.name));
-      console.log({ data });
       setItems(data);
     } catch (error: any) {
       setError(error);
@@ -21,7 +20,6 @@ export const useDragons = () => {
   const add = useCallback(
     async (dragon: IDragon) => {
       await dragonsApi.post(dragon);
-      // setItems((items) => (items ? [...items, dragon] : [dragon]));
       await getAll();
     },
     [getAll]
@@ -30,11 +28,6 @@ export const useDragons = () => {
   const update = useCallback(
     async (dragon: IDragon) => {
       await dragonsApi.put(dragon.id!, dragon);
-      // setItems(
-      //   (items) =>
-      //     items?.map((item) => (item.id === dragon.id ? dragon : item)) ||
-      //     undefined
-      // );
       await getAll();
     },
     [getAll]
@@ -43,9 +36,6 @@ export const useDragons = () => {
   const remove = useCallback(
     async (id: string) => {
       await dragonsApi.remove(id);
-      // setItems(
-      //   (items) => items?.filter((item: IDragon) => item.id !== id) || undefined
-      // );
       await getAll();
     },
     [getAll]
