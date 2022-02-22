@@ -12,17 +12,14 @@ import { OutlineButton } from "styles/button";
 import { useAuth } from "hooks/useAuth";
 
 export const DragonsIndex = () => {
-  const { signout, user } = useAuth();
+  const { signout } = useAuth();
 
   return (
     <Main>
       <PageHeader>
         <PageHeaderContainer>
           <PageTitle>Dragons</PageTitle>
-          <Flex gap="1rem" direction="row" alignItems="center">
-            {user!.email}
-            <OutlineButton onClick={signout}>Logout</OutlineButton>
-          </Flex>
+          <OutlineButton onClick={signout}>Logout</OutlineButton>
         </PageHeaderContainer>
       </PageHeader>
 
